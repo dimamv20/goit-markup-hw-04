@@ -35,10 +35,26 @@ ul{
     border-bottom:1px solid #e7e9fc;
     max-width: 1440px;
     margin: 0 auto;
+    box-shadow:0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+
 }
 .header-container{
     display: flex;
     align-items: center;
+    position: relative; 
+    color: #404bbf; 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.header-container .nav-class:first-child ::after{
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0; 
+    bottom: -1px; 
+    height: 4px; 
+    background-color: #404bbf; 
+    border-radius: 2px;
+
 }
 .nav-class{
     display: flex;
@@ -138,7 +154,10 @@ button:active, button:focus, link:active,link:focus{
     background: 
     linear-gradient(rgba(46,47,66,0.7), rgba(46,47,66,0.7)), 
     url('../images/people-office.jpg');
-  background-position: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 
 
 }
@@ -197,6 +216,17 @@ button:active, button:focus, link:active,link:focus{
     max-width: 1440px;
 
 }
+.icons-second-page{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 112px;
+    background-color: #f4f4fd; 
+    border-radius: 4px;
+    border: 1px solid #8e8f99; 
+    margin-bottom: 8px;
+
+}
 
 .visually-hidden {
     position: absolute;
@@ -253,8 +283,10 @@ button:active, button:focus, link:active,link:focus{
 .third-page-card{
     background-color: #FFFFFF;
     width: calc((100% - 72px) / 4); 
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     
 }
+
 
 .third-page-card:hover{
     box-shadow: 0px 2px 1px 0px #2E2F4214;
@@ -325,6 +357,33 @@ button:active, button:focus, link:active,link:focus{
 
 }
 
+.social-medias-list{
+    display: flex;
+    justify-content: center;
+    gap: 24px; 
+
+}
+.social-media-cards{
+    width: 40px; 
+    height: 40px; 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.href-social-media{
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #404bbf;
+
+}
+.href-social-media:hover, .href-social-media:focus{
+    border: 1px solid #31D0AA;
+    background-color: #31D0AA;
+}
 .quarter-page{
     padding: 120px 0 120px 0; 
     max-width: 1440px;
@@ -355,6 +414,12 @@ button:active, button:focus, link:active,link:focus{
 }
 .quarter-card{
     width: calc((100% - 48px) / 3); 
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.quarter-card p:hover{
+    transform: translateY(0%);
 }
 .image-box{
     position: relative;
@@ -373,7 +438,10 @@ button:active, button:focus, link:active,link:focus{
     transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .overlay p{
-
+    position: absolute;
+    top: 0; 
+    font-size: 16px; 
+    line-height: 1.5; 
     text-align: center;
     font-size: 16px;
     font-weight: 400;
@@ -383,6 +451,15 @@ button:active, button:focus, link:active,link:focus{
     padding-inline: 32px;
     padding-top: 40px;
     padding-bottom: 164px;
+    line-height: 1.5; 
+    letter-spacing: 0.02em;
+    color:#f4f4fd;
+    padding: 40px 32px; 
+    background-color: #4d5ae5; 
+    height: 100%;
+    width: 100%; 
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .image-box:hover  .overlay{
@@ -418,13 +495,27 @@ button:active, button:focus, link:active,link:focus{
     color:#F4F4FD;
 }
 .class-footer{
+    display: block;
     background-color: #2e2f42;
     padding: 100px 0;
     max-width: 1440px;
     margin:0 auto;
 
 }
+.class-container-footer{
+    display: flex;
+    align-items: baseline;
+    margin-right: 120px;
 
+}
+.footer-social-media{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color:#FFFFFF;
+    margin-bottom: 16px;
+}
 .footer-paragraph{
     line-height: 1.5;
     color:#F4F4FD;
@@ -440,11 +531,8 @@ button:active, button:focus, link:active,link:focus{
     background-color: #F4F4FD;
 }
 .icons-social-media{
-    fill:white;
-    padding: 9px;
-    background-color: #404BBF;
-    border-radius: 20px;
-    border:1px solid #404BBF;
+    fill:#f4f4fd;
+
 
 }
 .social-media{
@@ -466,12 +554,4 @@ button:active, button:focus, link:active,link:focus{
     border: 1px solid #404BBF;
     padding: 12px;
 }
-.icons-social-media{
-    fill:white;
-}
 
-.icons-social-media:hover, .icons-social-media:focus{
-    border: 1px solid #31D0AA;
-    background-color: #31D0AA;
-
-}
