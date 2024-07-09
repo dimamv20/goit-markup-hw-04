@@ -366,7 +366,7 @@ button:active, button:focus, link:active,link:focus{
 .social-medias-list{
     display: flex;
     justify-content: center;
-    gap: 16px;  
+    gap: 24px;  
 
 }
 .social-media-cards{
@@ -385,9 +385,13 @@ button:active, button:focus, link:active,link:focus{
     background-color: #4d5ae5;
 
 }
-.href-social-media:hover, .href-social-media:focus{
+.href-social-media:hover{
     border: 1px solid #31D0AA;
-    background-color: #31d0aa;
+    background-color: #404bbf; 
+}
+
+.href-social-media:focus{
+    background-color: #404bbf; 
 }
 .quarter-page{
     padding: 120px 0 120px 0; 
@@ -518,11 +522,10 @@ button:active, button:focus, link:active,link:focus{
     max-width: 264px;
 }
 
-.svgs{
-    padding: 24px 100px;
-    border-radius: 4px;
-    border: 1px solid #8E8F99;
-    background-color: #F4F4FD;
+footer .social-medias-list{
+    display: flex;
+    justify-content: center;
+    gap: 16px;  
 }
 .icons-social-media{
     fill:#f4f4fd;
