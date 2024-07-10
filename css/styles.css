@@ -44,6 +44,7 @@ ul{
     position: relative; 
     color: #404bbf; 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    
 }
 .header-container .nav-class:first-child ::after{
     content: '';
@@ -91,6 +92,8 @@ h1,h2,h3,h4,h5,h6{
     letter-spacing: 0.02em;
     color: #2e2f42;
     display: block;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   }
 
@@ -523,6 +526,7 @@ button:active, button:focus, link:active,link:focus{
     letter-spacing: 0.02em;
     color:#FFFFFF;
     margin-bottom: 16px; 
+    margin-top:0;
 }
 
 .footer-social-media-container{
