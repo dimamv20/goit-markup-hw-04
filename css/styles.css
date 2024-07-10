@@ -384,15 +384,13 @@ button:active, button:focus, link:active,link:focus{
     justify-content: center; 
     background-color: #4d5ae5;
 
+    transition: 250ms background-color cubic-bezier(0.4, 0, 0.2, 1);
 }
-.href-social-media:hover{
+.href-social-media:hover, .href-social-media:focus{
     border: 1px solid #31D0AA;
     background-color: #404bbf; 
 }
 
-.href-social-media:focus{
-    background-color: #404bbf; 
-}
 .quarter-page{
     padding: 120px 0 120px 0; 
     max-width: 1440px;
@@ -405,8 +403,8 @@ button:active, button:focus, link:active,link:focus{
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    color:#2e2f42;
-
+    color: #f4f4fd; 
+    background-color: #4d5ae5; 
     margin-bottom: 72px;
 }
 
@@ -549,9 +547,11 @@ footer .social-medias-list{
     gap:24px;
 
 }
-.footer-social-media-container{
-    
+.social-media-cards-footer:hover, .social-media-cards-footer:focus{
+    background-color: #31d0aa;
+
 }
+
 .icons-container{
     display: flex;
     align-items: center;
